@@ -3,109 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Discovery of India | Jawaharlal Nehru</title>
+  <title>The Discovery of India</title>
   <style>
-    :root {
-      --primary: #5c4033;
-      --accent: #d4af37;
-      --bg: #f8f1e3;
-    }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body {
-      font-family: 'Georgia', serif;
-      background: var(--bg);
-      color: #333;
-      line-height: 1.8;
-    }
-    header {
-      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 160px 20px 100px;
-    }
-    h1 { font-size: 3.5rem; margin-bottom: 10px; }
-    .subtitle { font-size: 1.4rem; opacity: 0.95; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
-    .chapter-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 28px;
-    }
-    .chapter-card {
-      background: white;
-      border-radius: 12px;
-      padding: 28px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-      transition: all 0.4s ease;
-    }
-    .chapter-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(92,64,51,0.25);
-    }
-    .chapter-card h3 {
-      color: var(--primary);
-      margin-bottom: 12px;
-      border-bottom: 3px solid var(--accent);
-      padding-bottom: 12px;
-    }
-    .read-more {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 15px;
-      display: inline-block;
-    }
-    footer {
-      text-align: center;
-      padding: 50px 20px;
-      background: #2c1e12;
-      color: #ddd;
-      margin-top: 60px;
-    }
+    body { font-family: Georgia, serif; background: #f8f1e3; color: #333; margin: 0; }
+    header { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/id/1015/1600/900'); background-size: cover; color: white; text-align: center; padding: 150px 20px; }
+    .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+    .chapter { margin-bottom: 60px; border-bottom: 1px solid #ddd; padding-bottom: 40px; }
+    h1, h2 { color: #8B4513; }
   </style>
 </head>
 <body>
   <header>
     <h1>The Discovery of India</h1>
-    <p class="subtitle">Jawaharlal Nehru</p>
-    <p style="max-width:700px;margin:20px auto;font-size:1.1rem;">A profound journey through India's past, present and future — written in Ahmadnagar Fort Prison</p>
+    <p>Jawaharlal Nehru</p>
   </header>
-
   <div class="container">
-    <h2 style="text-align:center; color:var(--primary); margin-bottom:40px;">Chapter-wise Detailed Study Resources</h2>
-    <div class="chapter-grid" id="chapters"></div>
+    <h2>Chapter-wise Detailed Summaries</h2>
+    <!-- Chapter content will be here -->
   </div>
-
-  <footer>
-    <p>The Discovery of India - Digital Study Resource</p>
-    <p>Built for students & history enthusiasts</p>
-  </footer>
-
-  <script>
-    const chapters = [
-      {n:1, title:"Ahmadnagar Fort", desc:"Nehru begins writing in prison during World War II. Reflections on India and the world."},
-      {n:2, title:"Badenweiler, Lausanne", desc:"Personal memories and emotional journey related to Kamala Nehru."},
-      {n:3, title:"The Quest", desc:"Nehru's philosophical search for the soul and meaning of India."},
-      {n:4, title:"The Discovery of India", desc:"Ancient India - Indus Valley, Vedic period and the birth of Hinduism."},
-      {n:5, title:"Through the Ages", desc:"Mauryan Empire, Gupta period, and classical age of India."},
-      {n:6, title:"New Problems", desc:"The coming of Islam, Delhi Sultanate and Mughal Empire."},
-      {n:7, title:"The Last Phase - 1", desc:"British consolidation and early resistance."},
-      {n:8, title:"The Last Phase - 2", desc:"Rise of Indian Nationalism and the freedom struggle."},
-      {n:9, title:"The Last Phase - 3", desc:"World War II, Quit India Movement and final years in prison."},
-      {n:10, title:"Ahmadnagar Fort Again", desc:"Final reflections before India's independence."}
-    ];
-
-    const container = document.getElementById('chapters');
-    chapters.forEach(ch => {
-      const card = document.createElement('div');
-      card.className = 'chapter-card';
-      card.innerHTML = `
-        <h3>Chapter ${ch.n}: ${ch.title}</h3>
-        <p>${ch.desc}</p>
-        <a href="#" class="read-more" onclick="alert('Detailed summary coming in next update!');">Read Full Summary →</a>
-      `;
-      container.appendChild(card);
-    });
-  </script>
 </body>
 </html>
